@@ -1,0 +1,61 @@
+\chapter{各抽出方法による属性を持つ・持たない画像組の例}
+ここでは，生成したデータセットにおける笑顔属性を持つ・持たない画像組の例を示す.
+
+\section{各データセットにおける笑顔属性を持つ・持たない画像組の例}
+\begin{description}
+\item[1．重複なしラベルデータセット]\mbox{}\\
+抽出方法2の，ラベル情報を元に笑顔・笑顔ではない画像組を抽出し，重複を単純に削除した画像組を元に作成したデータセットである．本論に載せていない画像組を図\ref{fig:apdsmilermd}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/apdsmilermd.eps}
+ 		\caption{重複なしラベルデータセットにおける属性を持つ・持たない画像組の例}
+ 		\label{fig:apdsmilermd}
+ 	\end{center}
+\end{figure}
+
+\item[2．コサイン類似度データセット]\mbox{}\\ 
+抽出方法3の，全データセットをラベル情報を用いて笑顔の画像群・笑顔ではない画像群に分割し，コサイン類似度を使用して抽出した笑顔・笑顔ではない画像組を元に作成したデータセットである．本論に載せていない画像組を図\ref{fig:apdsmilesim}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/apdsmilesim.eps}
+ 		\caption{コサイン類似度データセットにおける属性を持つ・持たない画像組の例}
+ 		\label{fig:apdsmilesim}
+ 	\end{center}
+\end{figure}
+
+\item[3．重複なしコサイン類似度データセット]\mbox{}\\ 
+抽出方法4の，ラベル情報を元に笑顔・笑顔ではない画像組を抽出し，コサイン類似度により重複を削除した画像組を元に作成したデータセットである．本論に載せていない画像組を図\ref{fig:apdsmilermdsim}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/apdsmilermdsim.eps}
+ 		\caption{重複なしコサイン類似度データセットにおける属性を持つ・持たない画像組の例}
+ 		\label{fig:apdsmilermdsim}
+ 	\end{center}
+\end{figure}
+
+\item[4．画像特徴量コサイン類似度データセット]\mbox{}\\ 
+抽出方法5の，全データセットをラベル情報を用いて笑顔の画像群・笑顔ではない画像群に分割し，VGGにより得られた画像特徴量におけるコサイン類似度を使用して抽出した笑顔・笑顔ではない画像組を元に作成したデータセットである.本論に載せていない画像組を図\ref{fig:apdsmilesim4096}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/apdsmilesim4096.eps}
+ 		\caption{画像特徴量コサイン類似度データセットにおける属性を持つ・持たない画像組の例}
+ 		\label{fig:apdsmilesim4096}
+ 	\end{center}
+\end{figure}
+\end{description}
+
+\section{各データセットの比較}
+以上のように，各データセットにより抽出される画像組は異なる．ここでは，同じ笑顔画像に対して，各データセットの対応する笑顔ではない画像がどのように選ばれているのかを比較する．
+
+その例を図\ref{fig:hikaku}に示す．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/hikaku.eps}
+ 		\caption{各データセットにおける属性を持つ・持たない画像組の比較}
+ 		\label{fig:hikaku}
+ 	\end{center}
+\end{figure}

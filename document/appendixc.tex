@@ -1,0 +1,35 @@
+
+\chapter{生成画像の比較}
+\section{各データセットにおける生成画像の比較}
+ここでは，すべてのデータセットに含まれていない笑顔ではない画像を使用し，笑顔属性を付与した画像を生成し，比較した．
+
+その例を図\ref{fig:hikaku2}に示す．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/hikaku2.eps}
+ 		\caption{各データセットにおける笑顔生成画像の比較}
+ 		\label{fig:hikaku2}
+ 	\end{center}
+\end{figure}
+
+男性属性を付与した場合は図\ref{fig:hikaku4}のようになった．入力は女性画像である．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.25]{./fig/hikaku4.eps}
+ 		\caption{各データセットにおける男性生成画像の比較}
+ 		\label{fig:hikaku4}
+ 	\end{center}
+\end{figure}
+
+%図\ref{fig:hikaku2}の3の例のように，ラベル情報を用いて作成したデータセットは，眼鏡などの属性情報に頑健だと言える．また，画像特徴量のコサイン類似度データセットは，特徴量を用いてコサイン類似度を計算しているため，属性情報も考慮できたと考えられる．
+
+\section{同じデータセット，同じパラメータにおける生成画像の比較}
+ここでは，同じデータセット・同じパラメータにおいて学習した3つのモデルにおける生成画像を比較した．その例を図\ref{fig:hikaku3}に示す．笑顔属性におけるRGB値コサイン類似度データセットを使用し，パラメータは属性特徴量の重み$\alpha = 0.5$，制約項の重み$\beta = 0.1$，学習回数は50エポックとした．同じデータセット・同じパラメータを使用しても，学習を行うごとに，生成画像が異なるモデルが生成される事が分かる．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/hikaku3.eps}
+ 		\caption{同じデータセット・同じパラメータにおける生成画像の比較}
+ 		\label{fig:hikaku3}
+ 	\end{center}
+\end{figure}

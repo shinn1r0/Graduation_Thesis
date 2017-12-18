@@ -1,0 +1,100 @@
+\documentclass[final,a4j,12pt]{jreport}
+\newfont {\boldmathl}{cmmib10 scaled\magstep1}
+\newcommand{\bm}[1]{\mbox{\boldmathl #1}}
+\newcommand{\lw}[1]{\smash{\lower2.0ex\hbox{#1}}}
+
+\usepackage{multicol}
+\usepackage{amsmath,amssymb}
+\usepackage{here}
+\usepackage{bm}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{textcomp}
+\usepackage{plext}
+\usepackage{enumerate}
+\usepackage{epsfig}
+\usepackage{comment}
+\usepackage{longtable}
+\usepackage{./stylefile/cite}
+\usepackage{./stylefile/jverb}
+\usepackage{./stylefile/here}
+\usepackage{./stylefile/bpaper}
+\usepackage{./stylefile/epsbox}
+\usepackage{./stylefile/fancyheadings}
+\usepackage{./stylefile/slashbox}
+\usepackage{./stylefile/subfigure}
+\bibliographystyle{./stylefile/jecon}
+
+\def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
+\def\dfrac#1#2{\genfrac{}{}{}{0}{\;#1\;}{\;#2\;}}
+\def\tfrac#1#2{\genfrac{}{}{}{1}{\;#1\;}{\;#2\;}}
+\def\sfrac#1#2{\genfrac{}{}{}{2}{\;#1\;}{\;#2\;}}
+\def\ssfrac#1#2{\genfrac{}{}{}{3}{\;#1\;}{\;#2\;}}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Z}{>{\raggedleft\arraybackslash}X}
+
+\usepackage{url}
+\renewcommand{\url}{\begingroup \def\UrlLeft{}\def\UrlRight{}\urlstyle{rm}\Url}
+
+\def\so{.\raisebox{1ex}{.}.\quad}
+\def\because{\raisebox{1ex}{.}.\raisebox{1ex}{.}\quad}
+\def\Omicron{O}
+\def\omicron{o}
+
+\newcommand{\pdif}[2]{\frac{\partial #1}{\partial #2}}
+
+\setcounter{secnumdepth}{6}
+\makeatletter
+\newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}
+  {.5\Cvs \@plus.3\Cdp}
+  {\reset@font\normalsize\sffamily}
+}
+
+\def\bs#1{\boldsymbol{#1}}
+\def\quot#1{``#1''}
+\def\ggn{Google {\it N}-gram}
+
+
+\addtolength{\topmargin}{-15mm}
+\addtolength{\oddsidemargin}{-15mm}
+
+
+\begin{document}
+\begin{titlepage}
+\thesis
+{時間軸セグメントを導入したHTM}
+{Hierarchical Temporal Memory Using Time Segments}
+{萩原 将文 教授}
+{西 宏章 教授}
+{29}
+{学籍番号 61412912}
+{内藤 慎一郎}
+\end{titlepage}
+\pagenumbering{roman}
+
+\contents
+
+\pagenumbering{arabic}
+
+
+% \input{./document/0-abstract}
+% \input{./document/1-introduction}
+% \input{./document/2-preprocess}
+% \input{./document/3-system}
+% \input{./document/4-experiment}
+% \input{./document/5-conclusion}
+% \input{./document/6-acknowledgement}
+
+% \bibliographystyle{jplain}
+% \bibliographystyle{jecon.bst}
+% \bibliography{./reference/reference}
+
+% \appendix
+
+% \input{./document/appendixa}
+% \input{./document/appendixb}
+% \input{./document/appendixc}
+\end{document}

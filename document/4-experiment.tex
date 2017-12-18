@@ -1,0 +1,305 @@
+\chapter{評価実験}
+
+\section{生成例}
+提案システムにおける画像の生成例を紹介する．ただし，実験におけるミニバッチサイズは64とした．ここであげている例は，テスト用画像内のはじめ64枚における生成画像である.
+\subsection{同じ画像を生成する顔画像生成モデル}
+画像生成モデルが正しく設計できているかの確認を行うため，予備実験として，入力画像と同じ画像を生成する顔画像生成モデルを構築した．学習データとしてCelebA内の画像50,000枚を使用し，学習データにない画像1,000枚を使用してテストを行った．入力画像を図\ref{fig:sameanswer}，テストの結果生成された画像を図\ref{fig:sametest}に示す．ただし，学習回数は40エポック，ロスの制約項重み$\beta$は0.3とした．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/sameanswer.eps}
+ 		\caption{同じ画像生成モデルへの入力画像}
+ 		\label{fig:sameanswer}
+ 	\end{center}
+ \end{figure}
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/sametest.eps}
+ 		\caption{同じ画像生成モデルによる生成画像}
+ 		\label{fig:sametest}
+ 	\end{center}
+ \end{figure}
+
+以上より，おおむね同じ人物のような画像が生成できている事が確認できた．
+ 
+\subsection{笑顔属性を付与した場合}
+笑顔属性を付与した場合の生成画像について述べる．提案システムへの入力画像は笑顔ではない画像，出力画像は笑顔画像となる．
+\subsubsection{各データセットにおける生成画像}
+はじめに，様々な抽出方法により作成した各データセットにおける生成例を紹介する．
+\begin{description}
+ \item[1．重複なしラベルデータセット]\mbox{}\\ 
+抽出方法2の，ラベル情報を元に笑顔・笑顔ではない画像組を抽出し，重複を単純に削除した画像組を用いて，学習を行った．学習回数は300エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.2とした．
+
+入力画像を図\ref{fig:smileinput}，生成された画像を図\ref{fig:smileoutput}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smileinput.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smileinput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smileoutput.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smileoutput}
+ 	\end{center}
+\end{figure}
+
+ \item[2．RGB値コサイン類似度データセット]\mbox{}\\ 
+抽出方法3の，全データセットをラベル情報を用いて笑顔の画像群・笑顔ではない画像群に分割し，画像のRGB値におけるコサイン類似度を使用して抽出した笑顔・笑顔ではない画像組を用いて，学習を行った．学習回数は50エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.2とした．
+
+入力画像を図\ref{fig:smile3input}，生成された画像を図\ref{fig:smile4output}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile3input.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smile3input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile4output.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smile4output}
+ 	\end{center}
+\end{figure}
+
+\item[3．重複なしコサイン類似度データセット]\mbox{}\\ 
+抽出方法4の，ラベル情報を元に笑顔・笑顔ではない画像組を抽出し，コサイン類似度により重複を削除した画像組を用いて，学習を行った．学習回数は150エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.1とした．
+
+入力画像を図\ref{fig:smile2input}，生成された画像を図\ref{fig:smile2output}に示す．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile2input.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smile2input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile2output.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smile2output}
+ 	\end{center}
+\end{figure}
+
+\item[4．画像特徴量コサイン類似度データセット]\mbox{}\\ 
+抽出方法3の，全データセットをラベル情報を用いて笑顔の画像群・笑顔ではない画像群に分割し，VGGにより得た画像特徴量におけるコサイン類似度を使用して抽出した笑顔・笑顔ではない画像組を用いて，学習を行った．学習回数は50エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.2とした．
+
+入力画像を図\ref{fig:smilesim4096input}，生成された画像を図\ref{fig:smilesim4096output}に示す．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smilesim4096input.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smilesim4096input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smilesim4096output.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smilesim4096output}
+ 	\end{center}
+\end{figure}
+
+\end{description}
+
+\subsection{男性属性を付与した場合}
+男性属性を付与した場合の生成画像について述べる．提案システムへの入力画像は女性画像，出力画像は男性画像となる．
+
+\begin{description}
+ \item[1．重複なしラベルデータセット]\mbox{}\\ 
+男性属性における重複なしデータセットの入力画像を図\ref{fig:male1input}、生成画像を図\ref{fig:male1output}に示す。学習回数は150エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.3とした．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male1input.eps}
+ 		\caption{男性画像生成の入力画像}
+ 		\label{fig:male1input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male1output.eps}
+ 		\caption{男性画像生成の生成画像}
+ 		\label{fig:male1output}
+ 	\end{center}
+\end{figure}
+
+ \item[2．RGB値コサイン類似度データセット]\mbox{}\\ 
+男性属性におけるRGB値コサイン類似度データセットの入力画像を図\ref{fig:male2input}、生成画像を図\ref{fig:male2output}に示す。学習回数は50エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.1とした．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male2input.eps}
+ 		\caption{男性画像生成の入力画像}
+ 		\label{fig:male2input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male2output.eps}
+ 		\caption{男性画像生成の生成画像}
+ 		\label{fig:male2output}
+ 	\end{center}
+\end{figure}
+ \item[3．重複なしコサイン類似度データセット]\mbox{}\\ 
+男性属性における重複なしコサイン類似度データセットの入力画像を図\ref{fig:male3input}、生成画像を図\ref{fig:male3output}に示す。学習回数は150エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.1とした．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male3input.eps}
+ 		\caption{男性画像生成の入力画像}
+ 		\label{fig:male3input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male3output.eps}
+ 		\caption{男性画像生成の生成画像}
+ 		\label{fig:male3output}
+ 	\end{center}
+\end{figure}
+ \item[4．画像特徴量コサイン類似度データセット]\mbox{}\\ 
+男性属性における重複なしコサイン類似度データセットの入力画像を図\ref{fig:male4input}、生成画像を図\ref{fig:male4output}に示す。学習回数は50エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.1とした．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male4input.eps}
+ 		\caption{男性画像生成の入力画像}
+ 		\label{fig:male4input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/male4output.eps}
+ 		\caption{男性画像生成の生成画像}
+ 		\label{fig:male4output}
+ 	\end{center}
+\end{figure}
+\end{description}
+
+\subsubsection{各パラメータの調整}
+次に，属性特徴量の重み$\alpha$，制約項の重み$\beta$の2つのパラメータの値を変化させた場合の生成画像を紹介する．ただし，ここでは笑顔属性を付与した場合のRGB値コサイン類似度データセットを用いる．学習回数は50エポックとする．
+\begin{description}
+ \item[1．制約項の重み$\beta$を調整した場合]\mbox{}\\
+はじめに，制約項の重み$\beta$を調整した場合に生成される画像について比較する．ただし，属性特徴量の重み$\alpha$は0.5とした． 
+
+制約項の重み$\beta$が0から0.5までの場合に生成される画像を比較すると，図\ref{fig:smilesim}のようになる．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/smilesim.eps}
+ 		\caption{制約項重みの値を変化させた場合の生成画像の比較}
+ 		\label{fig:smilesim}
+ 	\end{center}
+\end{figure}
+
+ \item[2．属性特徴量の重み$\alpha$を調整した場合]\mbox{}\\
+1.における結果をふまえて，制約項の重み$\beta$を0.1に設定した場合の属性特徴量の重み$\alpha$を調整した場合に生成される画像について比較する．学習回数は50エポックとする．
+
+属性特徴量の重み$\alpha$が0から1までの場合に生成される画像を比較すると，図\ref{fig:smilesim2}のようになる．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/smilesim2.eps}
+ 		\caption{属性特徴量の重みの値を変化させた場合の生成画像の比較}
+ 		\label{fig:smilesim2}
+ 	\end{center}
+\end{figure}
+
+ \item[3．制約項の重み$\beta$を減衰させた場合]\mbox{}\\
+制約項の重みを，学習している間すべて同じ値ではなく，減衰させた．これにより，はじめは大まかな画像を生成し，徐々に細部まで描画できるのではないかと考えた．制約項の重みは，図\ref{fig:tvweight}に示す．属性特徴量の重み$\alpha$は0.5，学習回数は50エポックとする．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/tvweight.eps}
+ 		\caption{減衰させた場合の制約項の重み}
+ 		\label{fig:tvweight}
+ 	\end{center}
+ \end{figure}
+ 
+入力画像を図\ref{fig:smilesimginput}，生成された画像を図\ref{fig:smilesimgoutput}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smilesimginput.eps}
+ 		\caption{制約項重み減衰時の入力画像}
+ 		\label{fig:smilesimginput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smilesimgoutput.eps}
+ 		\caption{制約項重み減衰時の生成画像}
+ 		\label{fig:smilesimgoutput}
+ 	\end{center}
+\end{figure}
+
+\end{description}
+
+
+\section{主観評価実験}
+\subsection{実験目的}
+提案システムによって生成された画像に関して，属性情報を付与されているか，入力画像と似ている人物かについての検証を行った．この実験では，笑顔属性を付与した場合における生成画像に対して評価を行った．
+
+\subsection{実験概要}
+重複なしラベルデータセット，RGB値コサイン類似度データセット，重複なしコサイン類似度データセット，画像特徴量コサイン類似度データセットのそれぞれを使用して生成された画像について，主観評価実験を行った．評価項目は以下の6点である．各評価項目に対して，1(当てはまらない)$\sim$ 5(当てはまる)の5段階で評価を行った．
+
+\begin{enumerate}
+  \item 人の顔の画像か
+  \item 人の顔写真として自然な画像であるか
+  \item 笑顔の画像であるか
+\end{enumerate}
+
+また，入力画像と生成画像については以下の項目についても5段階評価を行った．
+\begin{enumerate}
+\setcounter{enumi}{3}
+  \item 人物の性別は一致しているか
+　\item 帽子や眼鏡などの装飾品の有無が一致しているか
+  \item 生成画像に写っている人物が，入力画像と似ている人物かどうか
+\end{enumerate}
+
+生成画像の各データセットにおける画像枚数，学習回数を表\ref{tab:exp1}に示す．ただし，全データセットにおける属性特徴量の重み$\alpha$，制約項の重み$\beta$は同じ値に設定し，$\alpha=0.5$，$\beta=0.1$とした．
+\begin{table}[H]
+  \begin{center}
+    \caption{各データセットにおける画像枚数、学習回数}
+    \begin{tabular}{|c||c|c|c|} \hline
+      データセット名 & 学習用枚数 & テスト用枚数　& 学習回数 \\ \hline
+      a．重複なしラベルデータセット & 10,005 & 3,000 & 200\\ \hline
+      b．RGB値コサイン類似度データセット & 50,000 & 4,222 & 50 \\ \hline
+      c．重複なしコサイン類似度データセット & 10,005 & 3,000 & 150 \\ \hline
+      d．画像特徴量コサイン類似度データセット & 50,000 & 5,000 & 50 \\ \hline
+    \end{tabular}
+    \label{tab:exp1}
+  \end{center}
+\end{table}
+
+なお，評価に用いた生成画像は，各20枚とし，図\ref{fig:smileoutput}のようなミニバッチ分の生成画像1つにつき1枚，特定の位置の生成画像を選択した．
+
+被験者は20代の男性13名，女性4名である．
+
+\subsection{実験結果}
+表\ref{tab:exp2}に実験の結果を示す．なお，一番上の行はデータセット番号を表し，aから順に重複なしラベルデータセット，RGB値コサイン類似度データセット，重複なしコサイン類似度データセット，画像特徴量コサイン類似度データセットである．
+\begin{table}[H]
+  \begin{center}
+    \caption{実験の結果}
+    \begin{tabular}{|c||c|c|c|c||c|} \hline
+      質問 & a & b & c & d & 平均 \\ \hline \hline
+      人の顔の画像か & 3.9 & 4.3 & 3.5 & 4.0 & 3.9 \\ \hline
+      人の顔写真として自然な画像であるか & 3.5 & 3.9 & 3.1 & 3.6 & 3.5 \\ \hline
+      笑顔の画像であるか & 3.8 & 4.3 & 3.7 & 4.3 & 4.0 \\ \hline
+      人物の性別は一致しているか & 4.1 & 4.0 & 3.8 & 3.9 & 3.9\\ \hline
+      装飾品の有無が一致しているか & 3.7 & 4.0 & 3.6 & 4.0 & 3.8\\ \hline
+      似ている人物か & 3.0 & 3.4 & 2.8 & 3.2 & 3.1\\ \hline
+    \end{tabular}
+    \label{tab:exp2}
+  \end{center}
+\end{table}
+
+\subsection{実験考察}
+表\ref{tab:exp2}より，「笑顔の画像か」項目で平均4.0以上の評価値を得ることができ，笑顔属性が付与できていることが示唆される．特にデータセットbとデータセットdにおいては，高い評価値が得られている．これは，データセットbとdは属性を持つ・持たない画像組の抽出にコサイン類似度を使用しており，画像の背景や他の属性など，笑顔属性以外の要素が似ている画像組を抽出できたためと考えられる．
+
+また，データセットaとデータセットcは，「人の顔写真として自然な画像であるか」，「人の顔の画像か」という2項目において低い評価値となった．これは，データセットbとデータセットdに比べて，作成したデータセットにおける学習枚数が小さく，人の顔画像を生成するシステムとして十分な学習データ量に至らなかったためであると考えられる．
+
+CelebAデータセットに付属している属性のラベル付けには，男性属性が含まれている．そのためラベル情報を用いて作成したデータセットa，cでは「人物の性別は一致しているか」という項目において他データセットよりも高い評価値になると予想されるが，実際はあまり大きな違いは見られなかった．これは，男性ラベル情報を考慮していないデータセットb，dにおいて，性別が異なる画像組(笑顔画像・笑顔ではない画像)の数があまり多くなかった事や，CelebAデータセット全体で女性の画像が多いため男性ラベル情報を考慮しているデータセットa，cでも女性の顔画像が生成されやすいなどの原因が考えられる．
+
+さらに，「似ている人物か」という項目ではデータセットa，b，dでは平均の評価値3を越えているものの，他の項目に比べて低い評価となった．本研究では笑顔画像・笑顔ではない画像という画像組を，出来るだけ似ている人物になるように抽出方法を工夫したが，実際に同じ人物の笑顔画像・笑顔ではない画像がデータセット内に存在する訳ではない．そのため，似ている人物の顔画像を生成するには限界があったと考えられる．

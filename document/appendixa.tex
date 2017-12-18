@@ -1,0 +1,30 @@
+\chapter{CelebAデータセット}
+ここでは，本研究で用いた学習データセットCelebAの属性一覧，各属性に含まれる画像枚数を示す．
+40種類の属性と，各属性に属する画像数を図\ref{fig:celebAattr}に示す.
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=1]{./fig/celebAattr.eps}
+  \caption{属性一覧}
+  \label{fig:celebAattr}
+ \end{center}
+\end{figure}
+本研究では，十分な画像数を用いて学習を行うために，図\ref{fig:celebAattr}の中から画像枚数の多い属性である''Smile''と''Male''を選び，画像を生成した．画像数が十分ではない例として，``Glasses''を選択した場合の画像生成例を示す．
+
+抽出方法2の，ラベル情報を元に眼鏡・眼鏡ではない画像組を抽出し，重複を単純に削除した画像組を用いてデータセットを作成した．学習枚数は5,000枚，テスト枚数は783枚である．学習回数は400エポック，属性特徴量の重み$\alpha$は0.5，制約項の重み$\beta$は0.3とした．
+
+入力画像を図\ref{fig:glassinput}，生成された画像を図\ref{fig:glassoutput}に示す．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/glassinput.eps}
+ 		\caption{眼鏡画像生成の入力画像}
+ 		\label{fig:glassinput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/glassoutput.eps}
+ 		\caption{眼鏡画像生成の生成画像}
+ 		\label{fig:glassoutput}
+ 	\end{center}
+\end{figure}

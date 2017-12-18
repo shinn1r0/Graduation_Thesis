@@ -1,0 +1,68 @@
+\chapter{属性を付与した画像生成システム}
+
+\section{システムの概要}
+
+図\ref{fig:system}にシステム全体の流れを示す．まず画像の前処理を行い，画像組を抽出したのちに学習に用いる入力データ・出力データ，足しこむ属性特徴量を作成し，提案システムの学習を行う．学習した提案システムに画像を入力すると，属性情報が付与された画像を生成する事が出来る．
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.25]{./fig/system.eps}
+		\caption{システムの概要}
+		\label{fig:system}
+	\end{center}
+\end{figure}
+
+\section{画像生成の処理}
+顔画像生成システムを図\ref{fig:model}に示す．
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/model.eps}
+ 		\caption{顔画像生成モデル}
+ 		\label{fig:model}
+ 	\end{center}
+ \end{figure}
+画像を生成する際の処理の流れを，図\ref{fig:generator}に示す．ただし，図中の数字は，初め2層は次元数，残りの層は画像の高さ$\times$画像の幅$\times$チャンネル数となっている.
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.5]{./fig/generator.eps}
+ 		\caption{顔画像生成モデルの構造}
+ 		\label{fig:generator}
+ 	\end{center}
+ \end{figure}
+ 
+ このように，画像分類などに用いられるCNNの逆方向の操作を行い，画像を生成する．はじめは多数の小さな特徴マップに変形し，これを徐々に少数の大きな特徴マップに変形していく事で，画像の生成を行う．
+
+\section{学習に用いるロスの定義}
+提案システムを学習する際，以下のようにロスを定義し，誤差逆伝播法により学習を行った．ロス$\bm{L}$は，生成画像と教師画像(属性を持つ学習用画像)のピクセル誤差に制約項を加えたものとした．
+\begin{equation}
+  \bm{L} = \bm{L}_{pixel} + \beta \bm{L}_{tv}
+\end{equation}
+ただし，制約項をそのままロスに加えてしまうと，ロスの中の制約項の比率が大きくなりすぎてしまい，スムージング効果が大きすぎる画像が生成されてしまう．そこで，制約項に重み$\beta$をかけてロスに足し，調整を行った．
+
+次にピクセル誤差と制約項のそれぞれについて詳しく説明する.
+\subsection{ピクセル誤差}
+生成画像群$S^g = \{\bm{x}^g_{1}，...，\bm{x}^g_{n}\}$と正解画像群$S^a = \{\bm{x}^a_{1}，...，\bm{x}^a_{n}\}$は共に64$\times$64pixelsであるため，生成画像と正解画像を読み込んだ行列は64$\times$64$\times$3(チャンネル)となる．この行列を1次元に変形し，誤差をとる事でピクセル誤差$\bm{L}_{pixel}$を計算した．
+\begin{equation}
+  \bm{L}_{pixel} = \frac{\sum^{n}_{i=1}(\bm{x}^g_{i} - \bm{x}^a_{i})}{n}
+\end{equation}
+\subsection{制約項}
+ピクセル誤差のみをロスと定義すると，崩れた画像が生成されてしまう可能性があるため，制約項を導入した．制約項は隣り合うピクセルとの誤差で表され，Total Variation Lossと呼ばれる\cite{tvloss}．その理論を，図\ref{fig:tvloss}に示す．
+
+生成画像$\bm{x}^g$内の1ピクセルの値を$P_{i,j}$とする．ただし，$i，j$は画像内の位置を表すものとする．Total Variation Loss$\bm{L}_{tv}$の値は，
+\begin{equation}
+  \bm{L}_{tv} = \sum_{i,j}((P_{i,j+1} - P_{i,j})^2 + (P_{i+1,j} - P_{i,j})^2)
+\end{equation}
+と表される．
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.3]{./fig/tvloss.eps}
+ 		\caption{Total Variation Loss}
+ 		\label{fig:tvloss}
+ 	\end{center}
+ \end{figure}
+
+図\ref{fig:tvloss}のように，64$\times$64$\times$3で表される生成画像から，下の$y$成分1pixelを無視したものと，上の$y$成分1pixelを無視したものを比較する．このようにする事で計算量を少ないまま，隣り合うピクセルの誤差を計算する事が出来る．同様の処理を$x$軸方向にも行い，足し合わせる事で制約項とする．この制約項を導入する事でスムージング効果が得られ，滑らかな画像を生成する事ができる．
+
+\section{ミニバッチの導入}
+提案モデルを学習するためには，膨大な計算量が必要となる．そこで，計算量の削減を行うためにミニバッチを利用した．学習に用いるデータをミニバッチと呼ばれるいくつかのサイズの集合に分割し，ネットワークのパラメータの更新を毎回ではなく，ミニバッチ毎に行う．このようにする事で，学習が安定しやすく，学習にかかる計算量も少なくなる．
+
