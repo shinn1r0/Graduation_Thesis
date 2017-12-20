@@ -24,6 +24,7 @@
 % \usepackage{./stylefile/slashbox}
 % \usepackage{./stylefile/subfigure}
 \usepackage[backend=bibtex, style=numeric]{biblatex}
+\DeclarePrefChars{'-}
 \addbibresource{./reference/reference.bib}
 
 \def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
@@ -79,7 +80,6 @@
 \contents
 
 \pagenumbering{arabic}
-
 
 \input{./document/0-abstract}
 \input{./document/1-introduction}
