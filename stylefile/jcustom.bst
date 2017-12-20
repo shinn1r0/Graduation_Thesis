@@ -14,7 +14,7 @@
 	%
 	% Please notify Shouichi MATSUI(matsui@denken.or.jp) of any bugs in
 	% these standard styles or in this documentation file.
-	% èºà‰ ê≥àÍ  (ç‡) ìdóÕíÜâõå§ãÜèäÅ@èÓïÒÉVÉXÉeÉÄïî
+	% Êùæ‰∫ï Ê≠£‰∏Ä  (Ë≤°) ÈõªÂäõ‰∏≠Â§ÆÁ†îÁ©∂ÊâÄ„ÄÄÊÉÖÂ†±„Ç∑„Çπ„ÉÜ„É†ÈÉ®
 
 % Based on junsrt.bst
 % Modified by Hiroaki HASEGAWA
@@ -105,7 +105,7 @@ FUNCTION {output.nonnull}
           "," * write$
 
 	  newline$
-	  "\newblock " write$
+	  "¬•newblock " write$
 	}
 
 	{ output.state before.all =
@@ -135,7 +135,7 @@ FUNCTION {output.nonnull.nocomma}
 		"" * write$
 
 	  newline$
-	  "\newblock " write$
+	  "¬•newblock " write$
 	}
 
 	{ output.state before.all =
@@ -181,7 +181,7 @@ FUNCTION {output.check.nocomma}
 FUNCTION {output.bibitem}
 { newline$
 
-  "\bibitem{" write$
+  "¬•bibitem{" write$
 
   cite$ write$
   "}" write$
@@ -257,7 +257,7 @@ FUNCTION {emphasize}
     { pop$ "" }
     { duplicate$ is.kanji.str$
 	'skip$
-	{ "{\em " swap$ * "}" * }
+	{ "{¬•em " swap$ * "}" * }
       if$
     }
   if$
@@ -271,10 +271,10 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
 
-    { s nameptr "{ff~}{ll}" format.name$ is.kanji.str$
+    { s nameptr "{ff‚Äæ}{ll}" format.name$ is.kanji.str$
 %	{s nameptr "{ff}{ll}" format.name$ 't :=}
-	{s nameptr "{ll~}{ff}" format.name$ 't :=}
- 	{s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=}
+	{s nameptr "{ll‚Äæ}{ff}" format.name$ 't :=}
+ 	{s nameptr "{f.‚Äæ}{vv‚Äæ}{ll}{, jj}" format.name$ 't :=}
       if$
 
       nameptr #1 >
@@ -287,10 +287,10 @@ FUNCTION {format.names}
 
  		{ s is.kanji.str$
 
- 			{"ÇŸÇ©" * }
+ 			{"„Åª„Åã" * }
 
 
- 			{", et~al." * }
+ 			{", et‚Äæal." * }
 
  		  if$
  		}
@@ -337,12 +337,12 @@ FUNCTION {format.editors}
       editor num.names$ #1 >
  	{ editor is.kanji.str$
 
- 		{"Åiï“Åj" * } {", editors" * } if$
+ 		{"ÔºàÁ∑®Ôºâ" * } {", editors" * } if$
 
  	}
  	{ editor is.kanji.str$
 
- 		{"Åiï“Åj" *} {", editor" * } if$
+ 		{"ÔºàÁ∑®Ôºâ" *} {", editor" * } if$
 
  	}
       if$
@@ -417,7 +417,7 @@ FUNCTION {format.btitle}
 
 FUNCTION {tie.or.space.connect}
 { duplicate$ text.length$ #3 <
-    { "~" }
+    { "‚Äæ" }
     { " " }
   if$
   swap$ * *
@@ -434,7 +434,7 @@ FUNCTION {format.bvolume}
     { volume is.kanji.str$
 	{ volume }
 	{ is.kanji.entry
-	    {"ëÊ" volume * "ä™" *}
+	    {"Á¨¨" volume * "Â∑ª" *}
 	    {"Vol." volume tie.or.space.connect}
 	  if$
 	}
@@ -487,7 +487,7 @@ FUNCTION {format.edition}
     { edition is.kanji.str$
 	{ edition }
         { is.kanji.entry
-	    {"ëÊ" edition * "î≈" *}
+	    {"Á¨¨" edition * "Áâà" *}
 	    { output.state mid.sentence =
 	      { edition "l" change.case$ " edition" * }
 	      { edition "t" change.case$ " edition" * }
@@ -584,7 +584,7 @@ FUNCTION {format.chapter.pages}
 	{ chapter is.kanji.str$
 	    { "" }
 	    { is.kanji.entry
-		{"èÕ"}
+		{"Á´†"}
 		{"chapter"}
 	      if$
 	    }
@@ -593,7 +593,7 @@ FUNCTION {format.chapter.pages}
 	{ type "l" change.case$ }
       if$
       chapter is.kanji.str$ not is.kanji.entry and
-          {"ëÊ" chapter * swap$ *}
+          {"Á¨¨" chapter * swap$ *}
           { chapter is.kanji.str$
 		{chapter *}
 		{chapter tie.or.space.connect}
@@ -674,7 +674,7 @@ FUNCTION {format.article.crossref}
  	{ title is.kanji.str$
  	    { " " journal *  }
 
-  	    { "In {\em " journal * "\/}" * }
+  	    { "In {¬•em " journal * "¬•/}" * }
 
           if$
 	}
@@ -688,7 +688,7 @@ FUNCTION {format.article.crossref}
       if$
     }
   if$
-  " \cite{" * crossref * "}" *
+  " ¬•cite{" * crossref * "}" *
 }
 FUNCTION {format.crossref.editor}
 { editor is.kanji.str$
@@ -701,14 +701,14 @@ FUNCTION {format.crossref.editor}
       if$
       }
 
-      {editor #1 "{vv~}{ll}" format.name$}
+      {editor #1 "{vv‚Äæ}{ll}" format.name$}
 
   if$
   editor num.names$ duplicate$
   #2 >
     { editor is.kanji.str$
 
-	  {pop$ "ÇŸÇ©" *} {pop$ ", et~al." * } if$
+	  {pop$ "„Åª„Åã" *} {pop$ ", et‚Äæal." * } if$
 
     }
     { #2 <
@@ -718,7 +718,7 @@ FUNCTION {format.crossref.editor}
 
  	    { editor is.kanji.str$
 
- 		{"ÇŸÇ©" *} {", et~al." * } if$
+ 		{"„Åª„Åã" *} {", et‚Äæal." * } if$
 
  	    }
  	    { editor is.kanji.str$
@@ -733,7 +733,7 @@ FUNCTION {format.crossref.editor}
  		   if$
  		 *
  		}
- 		{" and " * editor #2 "{vv~}{ll}" format.name$ * }
+ 		{" and " * editor #2 "{vv‚Äæ}{ll}" format.name$ * }
  	      if$
  	    }
 	  if$
@@ -753,7 +753,7 @@ FUNCTION {format.book.crossref}
     { volume is.kanji.str$
 	{ volume }
 	{ is.kanji.entry
-	    {"ëÊ" volume * "ä™" *}
+	    {"Á¨¨" volume * "Â∑ª" *}
 	    {"Vol." volume tie.or.space.connect " of " *  }
 	  if$
 	}
@@ -774,7 +774,7 @@ FUNCTION {format.book.crossref}
 
 		{ series ", " * swap$ * }
 
-	        { "{\em " * series * "\/}" * }
+	        { "{¬•em " * series * "¬•/}" * }
 	      if$
 	    }
 
@@ -785,7 +785,7 @@ FUNCTION {format.book.crossref}
     }
     { format.crossref.editor * }
   if$
-  " \cite{" * crossref * "}" *
+  " ¬•cite{" * crossref * "}" *
 }
 FUNCTION {format.incoll.inproc.crossref}
 { editor empty$
@@ -800,7 +800,7 @@ FUNCTION {format.incoll.inproc.crossref}
  	    { booktitle is.kanji.str$
  		{ booktitle }
 
- 		{"In {\em " booktitle * "\/}" * }
+ 		{"In {¬•em " booktitle * "¬•/}" * }
 
  	       if$
  	    }
@@ -819,7 +819,7 @@ FUNCTION {format.incoll.inproc.crossref}
       if$
     }
   if$
-  " \cite{" * crossref * "}" *
+  " ¬•cite{" * crossref * "}" *
 }
 FUNCTION {article}
 { output.bibitem
@@ -857,7 +857,7 @@ FUNCTION {book}
   if$
   new.block
   format.btitle "title" output.check
-  % èºà‰Ç≥Å[ÇÒ!! new.block ì¸ÇÍÇ∆Ç¢ÇƒÇÊÅ[!!
+  % Êùæ‰∫ï„Åï„Éº„Çì!! new.block ÂÖ•„Çå„Å®„ÅÑ„Å¶„Çà„Éº!!
   new.block
   crossref missing$
 	{
@@ -1207,8 +1207,8 @@ MACRO {toms} {"ACM Transactions on Mathematical Software"}
 MACRO {toois} {"ACM Transactions on Office Information Systems"}
 MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
 MACRO {tcs} {"Theoretical Computer Science"}
-MACRO {tieice} {"ìdéqèÓïÒí êMäwâÔò_ï∂éè"}
-MACRO {tipsj}  {"èÓïÒèàóùäwâÔò_ï∂éè"}
+MACRO {tieice} {"ÈõªÂ≠êÊÉÖÂ†±ÈÄö‰ø°Â≠¶‰ºöË´ñÊñáË™å"}
+MACRO {tipsj}  {"ÊÉÖÂ†±Âá¶ÁêÜÂ≠¶‰ºöË´ñÊñáË™å"}
 MACRO {jipsj}  {"Journal of Informatin Processing Society of Japan"}
 MACRO {jorsj}  {"Journal of the Operations Research Society of Japan"}
 
@@ -1257,13 +1257,13 @@ FUNCTION {begin.bib}
     'skip$
     { preamble$ write$ newline$ }
   if$
-  "\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
+  "¬•begin{thebibliography}{"  longest.label  * "}" * write$ newline$
 }
 EXECUTE {begin.bib}
 EXECUTE {init.state.consts}
 ITERATE {call.type$}
 FUNCTION {end.bib}
 { newline$
-  "\end{thebibliography}" write$ newline$
+  "¬•end{thebibliography}" write$ newline$
 }
 EXECUTE {end.bib}

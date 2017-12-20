@@ -1,0 +1,84 @@
+\csname\if11pdfprimitive\fi\endcsname\chardef\x14\relax\pdfprimitive\catcode37\x\let%
+%
+% tcclearerr.sty
+%
+%% reset code tables
+\;\relax\let\@\pdfprimitive\@\chardef\x10\;\@\catcode32\x\@\catcode13 5\;%
+\endlinechar13\;\@\catcode96 12 \@\catcode61 12\;%
+\ifx\@@par\tcce@undefined \@\par \else \@@par \fi% switch to vmode
+\@\catcode`\{=1 \@\catcode`\}=2 \@\catcode`\@=11
+\@\catcode`\#=6 \@\catcode`\~=13 \@\catcode`\<=12 
+\@\countdef\tcce@count=255
+\def\tcce@setcc#1#2#3{\tcce@count=`#1\;
+\def\tcce@x{\@\catcode\tcce@count=#3\;\@\advance\tcce@count1
+\ifnum\tcce@count<`#2\;\expandafter\tcce@x\fi}
+\tcce@x\@\catcode\tcce@count#3\;}
+\tcce@setcc\a\z{11}\tcce@setcc\A\Z{11}\tcce@setcc\0\9{12}
+\@\catcode`\>=12 \@\catcode`\!=12
+\escapechar=`\\ \newlinechar=10 \globaldefs=0
+%
+%% helpers
+\def\tcce@gobble#1{}\def\tcce@iden#1{#1}
+\def\tcce@car#1#2{#1}\def\tcce@cdr#1#2{#2}
+%
+%% engine check
+\def\tcce@ifprimitive#1#2{%
+  \edef\tcce@a{\@\string#1}\edef\tcce@b{\@\meaning#1}%
+  \ifx\tcce@a\tcce@b#2\fi}
+\def\tcce@etex#1{}
+\tcce@ifprimitive\unless{\def\tcce@etex#1{#1}}
+%
+%% clear system toks parameters
+\newcount\tcce@outputbox \tcce@outputbox=255
+\@\everycr{}
+\@\everydisplay{}
+\@\everyhbox{}
+\tcce@etex{\@\everyjob{}}
+\@\everymath{}
+\@\everypar{}
+\@\everyvbox{}
+\ifx\outputbox\tcce@undefined
+  \ifx\luatexoutputbox\tcce@undefined
+    \let\outputbox\tcce@outputbox
+  \else \let\outputbox\luatexoutputbox \fi
+\fi
+\globaldefs=1
+\@\output{\setbox0\box\outputbox \deadcycles0\relax}
+\globaldefs=0
+%
+%% produce the bogus page
+\@\font\tcce@fontA=cmti12 at 14.4pt
+\@\font\tcce@fontB=cmbx12 at 20.74pt
+\@\font\tcce@fontC=cmu10 at 12pt
+\@\font\tcce@fontD=cmbsy10 at 24.88pt
+\@\font\tcce@fontE=cmssdc10 at 20.74pt
+\@\font\tcce@fontF=cmfi10 at 20.74pt
+\setbox0\vbox{%
+  \baselineskip0pt \lineskip0pt \lineskiplimit=-1000pt
+  \hbox{\tcce@fontA\kern   0pt This}%
+  \vskip8pt\relax \def~{\hskip2pt\relax}%
+  \hbox{\tcce@fontB\kern 240pt d~o~c~u~m~e~n~t}%
+  \vskip24pt\relax
+  \hbox{\tcce@fontC\kern 120pt gave}%
+  \vskip96pt\relax \def~{\hskip8pt\relax}%
+  \hbox{\tcce@fontD\kern 160pt N~O}%
+  \vskip24pt\relax
+  \hbox{\tcce@fontE\kern 200pt ERROR!!}%
+  \vskip120pt\relax
+  \hbox{\tcce@fontF\kern  80pt Congratulations!!!!}%
+}
+\@\shipout\box0\relax
+%
+%% finale
+\globaldefs=1
+\ifx\@@end\tcce@undefined \let\tcce@end\end
+\else \let\tcce@end\@@end \fi
+\globaldefs=0
+\def\tcce@finale{%
+  \batchmode
+  \nonstopmode
+  \tcce@end
+}
+\tcce@finale\relax
+% should not reach here!
+%% EOF

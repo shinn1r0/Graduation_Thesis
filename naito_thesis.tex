@@ -15,15 +15,16 @@
 \usepackage{epsfig}
 \usepackage{comment}
 \usepackage{longtable}
-\usepackage{./stylefile/cite}
-\usepackage{./stylefile/jverb}
-\usepackage{./stylefile/here}
+% \usepackage{./stylefile/cite}
+% \usepackage{./stylefile/jverb}
+% \usepackage{./stylefile/here}
 \usepackage{./stylefile/bpaper}
-\usepackage{./stylefile/epsbox}
+% \usepackage{./stylefile/epsbox}
 \usepackage{./stylefile/fancyheadings}
-\usepackage{./stylefile/slashbox}
-\usepackage{./stylefile/subfigure}
-\bibliographystyle{./stylefile/jecon}
+% \usepackage{./stylefile/slashbox}
+% \usepackage{./stylefile/subfigure}
+\usepackage[backend=bibtex, style=numeric]{biblatex}
+\addbibresource{./reference/reference.bib}
 
 \def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
 \def\dfrac#1#2{\genfrac{}{}{}{0}{\;#1\;}{\;#2\;}}
@@ -88,9 +89,7 @@
 \input{./document/5-conclusion}
 \input{./document/6-acknowledgement}
 
-\bibliographystyle{jplain}
-\bibliographystyle{jecon.bst}
-\bibliography{./reference/reference.bib}
+\printbibliography[title=参考文献]
 
 \appendix
 
