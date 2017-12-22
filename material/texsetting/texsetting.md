@@ -15,6 +15,7 @@
 
 ## Texliveのbinをパスに追加する
 Texliveのbinは`/usr/local/texlive/2017/bin`(来年の途中くらいで2018になるかも)にあるので、`export PATH=$PATH:/usr/local/texlive/2017/bin`を.bashrc(bashの人)とか.zshenv(zshの人)とかに書く。
+**MacですでにMacTexなどで入れている場合のPATHは`/Library/TeX/texbin`の場合があります。また上記のインストール方法はMacでも有効ですが、その際のPATHは未確認なため`which platex`などで確認して見てください。
 
 ## tlmgr(Texliveのpackage管理ツール)の設定
 
@@ -63,6 +64,7 @@ Atomの全体設定のpackage(パッケージ)のところでlatexで検索す�
 ![画像３](3.png)
 
 まずはPATHを設定します
+**このPATHはMacTex用です。Ubuntuの場合は上のPATH(/usr/local/texlive/2017/bin)です**
 ![画像４](4.png)
 
 複数のtexファイルに分けて書く時はセーブするたびにbuildされるとdocumentの下に置いている分割ファイル自体がbuildされて面倒なので外します。
