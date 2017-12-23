@@ -1,4 +1,4 @@
-# UbuntuとMacにおける卒論用LaTexの設定
+# UbuntuとMacにおける卒論用LaTexの設定(2017/12/22)
 ## Texliveのインストール
 ### 手順
 インストーラーのダウンロード
@@ -15,7 +15,7 @@
 
 ## Texliveのbinをパスに追加する
 Texliveのbinは`/usr/local/texlive/2017/bin`(来年の途中くらいで2018になるかも)にあるので、`export PATH=$PATH:/usr/local/texlive/2017/bin`を.bashrc(bashの人)とか.zshenv(zshの人)とかに書く。
-**MacですでにMacTexなどで入れている場合のPATHは`/Library/TeX/texbin`の場合があります。また上記のインストール方法はMacでも有効ですが、その際のPATHは未確認なため`which platex`などで確認して見てください。
+**MacですでにMacTexなどで入れている場合のPATHは`/Library/TeX/texbin`の場合があります。また上記のインストール方法はMacでも有効ですが、その際のPATHは未確認なため`which platex`などで確認して見てください。**
 
 ## tlmgr(Texliveのpackage管理ツール)の設定
 
