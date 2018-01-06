@@ -55,6 +55,8 @@ HTMはセル内にセグメント構造を持っている。
 入力セグメントは入力を受け取るもので、各セルに１つある。
 セグメント集合も各セルに１つあり、接続セグメントを複数持っている。
 この接続セグメントは他のセルとの接続値を保持しており、学習によってこの接続値を増減させしきい値との比較によってセル間のシナプス接続を判定する。
+接続セグメントはHTM中のすべてのセルとの接続値を持つため２次元のベクトル値となる。
+そのためセグメント集合は３次元のベクトル値となる。
 
 \vspace{5mm}
 \begin{figure}[ht]
@@ -71,6 +73,18 @@ HTMはセル内にセグメント構造を持っている。
 
 \section{HTMの学習アルゴリズム}
 \subsection{活性化状態の計算}
+
+\begin{equation}
+  a^t_{ij} =
+  \left\{
+  \begin{alignedat}{3}
+    1 \qquad &if \; j\in{\bf W^t} \; and \; \pi^{t-1}_{ij} = 1\\
+    1 \qquad &if \; j\in{\bf W^t} \; and \; \sum_i \pi^{t-1}_{ij} = 0\\
+    0 \qquad &otherwise
+  \end{alignedat}
+  \right.
+\end{equation}
+
 \subsection{予測状態の計算}
 \subsection{セグメント集合を用いた接続値の更新}
 
