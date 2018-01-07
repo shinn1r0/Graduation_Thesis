@@ -44,11 +44,11 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>naito_thesis.aux</file>
-      <file>naito_thesis-blx.bib</file>
+      <file>paper.aux</file>
+      <file>paper-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>naito_thesis.bbl</file>
+      <file>paper.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -67,20 +67,20 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>naito_thesis</infile>
+      <infile>paper</infile>
     </cmdline>
     <input>
-      <file>naito_thesis.aux</file>
+      <file>paper.aux</file>
     </input>
     <output>
-      <file>naito_thesis.bbl</file>
+      <file>paper.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>naito_thesis.bbl</file>
+      <file>paper.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>naito_thesis.aux</file>
-      <file>naito_thesis-blx.bib</file>
+      <file>paper.aux</file>
+      <file>paper-blx.bib</file>
     </requires>
     <requires type="editable">
       <file>./reference/reference.bib</file>
