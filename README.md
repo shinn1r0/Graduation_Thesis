@@ -1,4 +1,6 @@
 # Graduation_Thesis
+## paper.tex
+texのメインファイル
 ## document
 各章ごとのtexファイル
 ## draw.io
