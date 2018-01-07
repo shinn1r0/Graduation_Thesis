@@ -153,7 +153,66 @@ ${\bf \dot{D}}^d_{ij}$は${\bf D}^d_{ij}$の正の値をもつ位置のみをと
   \Delta {\bf D}^d_{ij} = p^{--}{\bf \dot{D}}^d_{ij} \; where \; a^t_{ij} = 0 \; and \; \|{\bf \tilde{D}}^d_{ij} \circ {\bf A}^{t-1}\|_1 > \theta \; , \; where \; p^{--} \ll p^-
 \end{equation}
 
-\section{疎な分散表現とのエンコーダと分類器}
+\section{HTMの学習の例}
+
+\subsection{学習前}
+例として下の図を考える。
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=14cm]{./fig/drawing_5}
+    \caption{学習前のHTM： (A, B, C, D)という系列と(X, B, C, Y)という系列を入力した場合}
+    \label{fig:HTM_before_learning}
+  \end{center}
+\end{figure}
+
+学習前のHTMは上の図2.5のようになっており、入力に対して予測状態になるセルが存在せずに勝者カラムのセルがすべて活性化状態に遷移していく。
+
+\subsection{学習中}
+例として下の図を考える。
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=14cm]{./fig/drawing_7}
+    \caption{学習中のHTM}
+    \label{fig:HTM_during_learning}
+  \end{center}
+\end{figure}
+
+学習中のHTMは上の図2.6のようになっており、１つ前の時刻の活性化状態のセルとのシナプス結合によってセルが予測状態に遷移することによって次の時刻のパターンが予測される。
+また予測状態に遷移するセルが増加するほどパターンの表現が疎になっていく。
+
+\subsection{学習後}
+例として下の図を考える。
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=14cm]{./fig/drawing_6}
+    \caption{学習後のHTM： (A, B, C, D)という系列と(X, B, C, Y)という系列を入力した場合}
+    \label{fig:HTM_after_learning}
+  \end{center}
+\end{figure}
+
+学習が完了すると最初の入力以外は疎な分散表現によってパターンを表現するようになり、系列中のすべてのパターンが予測されるようになる。
+
+\newpage
+\subsection{並列同時予測}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=10cm]{./fig/drawing_8}
+    \caption{学習後のHTM： (A, B, C, D)という系列と(X, B, C, Y)という系列を学習後に(C)という系列を入力した場合}
+    \label{fig:HTM_parallel_prediction}
+  \end{center}
+\end{figure}
+
+HTMの特徴として並列同時予測が可能であるということが挙げられる。
+例として(A, B, C, D)と(X, B, C, Y)という２つの系列を学習後に前の文脈がない状態で(C)という系列を与えたものを考える。
+このときCは最初の入力であるため勝者カラムのすべてのセルが活性化状態に遷移する。
+これによってDとY両方の予測を導くセルが予測状態に遷移するため、同時に複数の予想が可能になる。
+
+\newpage
+\section{エンコーダと分類器}
 HTMではパターンの表現はカラムの組み合わせによって表させる。そのためエンコーダによって入力値をカラムの組み合せに変換してHTMに入力し、分類器によってHTMの予測状態のセルから予測されているパターンへ分類することが必要となる。
 
 エンコーダは入力値に対してランダムに一定数のカラムを選び出して割り当てている。
