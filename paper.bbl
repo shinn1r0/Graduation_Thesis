@@ -1,0 +1,77 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{htm}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CY}{%
+         family={Cui},
+         familyi={C\bibinitperiod},
+         given={Yuwei},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SAJH}{%
+         family={Subutai\bibnamedelima Ahmad},
+         familyi={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+         given={Jeff\bibnamedelima Hawkins},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CYSAJH1}
+    \strng{fullhash}{CYSAJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{11}
+    \field{pages}{2474\bibrangedash 2504}
+    \field{title}{Continuous Online Sequence Learning with an Unsupervised
+  Neural Network Model}
+    \field{volume}{28}
+    \field{journaltitle}{MIT Press Journal}
+    \field{year}{2016}
+  \endentry
+
+  \entry{neurons}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Hawkins},
+         familyi={H\bibinitperiod},
+         given={Jeff},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Subutai},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJAS1}
+    \strng{fullhash}{HJAS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Why Neurons Have Thousands of Synapses, A Theory of Sequence
+  Memory in Neocortex}
+    \field{journaltitle}{arxiv}
+    \field{year}{2015}
+  \endentry
+\enddatalist
+\endinput

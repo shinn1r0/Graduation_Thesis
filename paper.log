@@ -1,0 +1,743 @@
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.1.5)  10 JAN 2018 18:58
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**paper.tex
+(./paper.tex
+pLaTeX2e <2017/10/28>+3 (based on LaTeX2e <2017-04-15>)
+Babel <3.16> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2017/09/19 v1.7g Standard pLaTeX class
+\c@@paper=\count82
+(/usr/local/texlive/2017/texmf-dist/tex/platex/base/jsize12.clo
+File: jsize12.clo 2017/09/19 v1.7g Standard pLaTeX file (size option)
+)
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 702.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count92
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count93
+\mult@box=\box42
+\multicol@leftmargin=\dimen121
+\c@unbalance=\count94
+\c@collectmore=\count95
+\doublecol@number=\count96
+\multicoltolerance=\count97
+\multicolpretolerance=\count98
+\full@width=\dimen122
+\page@free=\dimen123
+\premulticols=\dimen124
+\postmulticols=\dimen125
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box43
+\last@line=\box44
+\maxbalancingoverflow=\dimen126
+\mult@rightbox=\box45
+\mult@grightbox=\box46
+\mult@gfirstbox=\box47
+\mult@firstbox=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\c@columnbadness=\count99
+\c@finalcolumnbadness=\count100
+\last@try=\dimen127
+\multicolovershoot=\dimen128
+\multicolundershoot=\dimen129
+\mult@nat@firstbox=\box66
+\colbreak@box=\box67
+\mc@col@check@num=\count101
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen130
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen131
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count102
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count103
+\leftroot@=\count104
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count105
+\DOTSCASE@=\count106
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box68
+\strutbox@=\box69
+\big@size=\dimen132
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count107
+\c@MaxMatrixCols=\count108
+\dotsspace@=\muskip10
+\c@parentequation=\count109
+\dspbrk@lvl=\count110
+\tag@help=\toks16
+\row@=\count111
+\column@=\count112
+\maxfields@=\count113
+\andhelp@=\toks17
+\eqnshift@=\dimen133
+\alignsep@=\dimen134
+\tagshift@=\dimen135
+\tagwidth@=\dimen136
+\totwidth@=\dimen137
+\lineht@=\dimen138
+\@envbody=\toks18
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/here/here.sty) (/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count114
+\float@exts=\toks20
+\float@box=\box70
+\@float@everytoks=\toks21
+\@floatcapt=\box71
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+\symboldmincho=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 99.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+) (/usr/local/texlive/2017/texmf-dist/tex/platex/base/plext.sty
+Package: plext 2017/07/21 v1.2h pLaTeX package file (community edition)
+\@floatbox=\box72
+\floatwidth=\dimen141
+\floatheight=\dimen142
+\floatruletick=\dimen143
+\captionfloatsep=\dimen144
+\captionwidth=\dimen145
+\@captionbox=\box73
+LaTeX Info: Redefining \parbox on input line 318.
+\save@ybaselineshift=\dimen146
+\save@tbaselineshift=\dimen147
+\@picwd=\dimen148
+\rensujiskip=\skip48
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks23
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen149
+\epsfysize=\dimen150
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count115
+\LTcapwidth=\dimen151
+\LT@head=\box74
+\LT@firsthead=\box75
+\LT@foot=\box76
+\LT@lastfoot=\box77
+\LT@cols=\count116
+\LT@rows=\count117
+\c@LT@tables=\count118
+\c@LT@chunks=\count119
+\LT@p@ftn=\toks24
+) (./stylefile/jtygm.sty
+
+LaTeX Warning: You have requested package `./stylefile/jtygm',
+               but the package provides `jtygm'.
+
+Package: jtygm 1998/06/12 based on v1.3 KANJI font defines
+) (./stylefile/bpaper.sty) (./stylefile/fancyheadings.sty
+\headrulewidth=\dimen152
+\footrulewidth=\dimen153
+\plainheadrulewidth=\dimen154
+\plainfootrulewidth=\dimen155
+\headwidth=\dimen156
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
+ (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count120
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count121
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count122
+\decimalpart=\count123
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count124
+\c@listtotal=\count125
+\c@listcount=\count126
+\c@liststart=\count127
+\c@liststop=\count128
+\c@citecount=\count129
+\c@citetotal=\count130
+\c@multicitecount=\count131
+\c@multicitetotal=\count132
+\c@instcount=\count133
+\c@maxnames=\count134
+\c@minnames=\count135
+\c@maxitems=\count136
+\c@minitems=\count137
+\c@citecounter=\count138
+\c@savedcitecounter=\count139
+\c@uniquelist=\count140
+\c@uniquename=\count141
+\c@refsection=\count142
+\c@refsegment=\count143
+\c@maxextratitle=\count144
+\c@maxextratitleyear=\count145
+\c@maxextradate=\count146
+\c@maxextraalpha=\count147
+\c@abbrvpenalty=\count148
+\c@highnamepenalty=\count149
+\c@lownamepenalty=\count150
+\c@maxparens=\count151
+\c@parenlevel=\count152
+\blx@tempcnta=\count153
+\blx@tempcntb=\count154
+\blx@tempcntc=\count155
+\blx@maxsection=\count156
+\blx@maxsegment@0=\count157
+\blx@notetype=\count158
+\blx@parenlevel@text=\count159
+\blx@parenlevel@foot=\count160
+\blx@sectionciteorder@0=\count161
+\labelnumberwidth=\skip53
+\labelalphawidth=\skip54
+\biblabelsep=\skip55
+\bibitemsep=\skip56
+\bibnamesep=\skip57
+\bibinitsep=\skip58
+\bibparsep=\skip59
+\bibhang=\skip60
+\blx@bcfin=\read1
+\blx@bcfout=\write5
+\c@mincomprange=\count162
+\c@maxcomprange=\count163
+\c@mincompwidth=\count164
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count165
+\c@savedafterword=\count166
+\c@annotator=\count167
+\c@savedannotator=\count168
+\c@author=\count169
+\c@savedauthor=\count170
+\c@bookauthor=\count171
+\c@savedbookauthor=\count172
+\c@commentator=\count173
+\c@savedcommentator=\count174
+\c@editor=\count175
+\c@savededitor=\count176
+\c@editora=\count177
+\c@savededitora=\count178
+\c@editorb=\count179
+\c@savededitorb=\count180
+\c@editorc=\count181
+\c@savededitorc=\count182
+\c@foreword=\count183
+\c@savedforeword=\count184
+\c@holder=\count185
+\c@savedholder=\count186
+\c@introduction=\count187
+\c@savedintroduction=\count188
+\c@namea=\count189
+\c@savednamea=\count190
+\c@nameb=\count191
+\c@savednameb=\count192
+\c@namec=\count193
+\c@savednamec=\count194
+\c@translator=\count195
+\c@savedtranslator=\count196
+\c@shortauthor=\count197
+\c@savedshortauthor=\count198
+\c@shorteditor=\count199
+\c@savedshorteditor=\count266
+\c@labelname=\count267
+\c@savedlabelname=\count268
+\c@institution=\count269
+\c@savedinstitution=\count270
+\c@lista=\count271
+\c@savedlista=\count272
+\c@listb=\count273
+\c@savedlistb=\count274
+\c@listc=\count275
+\c@savedlistc=\count276
+\c@listd=\count277
+\c@savedlistd=\count278
+\c@liste=\count279
+\c@savedliste=\count280
+\c@listf=\count281
+\c@savedlistf=\count282
+\c@location=\count283
+\c@savedlocation=\count284
+\c@organization=\count285
+\c@savedorganization=\count286
+\c@origlocation=\count287
+\c@savedoriglocation=\count288
+\c@origpublisher=\count289
+\c@savedorigpublisher=\count290
+\c@publisher=\count291
+\c@savedpublisher=\count292
+\c@language=\count293
+\c@savedlanguage=\count294
+\c@origlanguage=\count295
+\c@savedoriglanguage=\count296
+\c@pageref=\count297
+\c@savedpageref=\count298
+\shorthandwidth=\skip61
+\shortjournalwidth=\skip62
+\shortserieswidth=\skip63
+\shorttitlewidth=\skip64
+\shortauthorwidth=\skip65
+\shorteditorwidth=\skip66
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count299
+\c@textcitetotal=\count300
+\c@textcitemaxnames=\count301
+\c@biburlnumpenalty=\count302
+\c@biburlucpenalty=\count303
+\c@biburllcpenalty=\count304
+\c@smartand=\count305
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count306
+\c@bbx:relatedtotal=\count307
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2017/12/19 v3.10 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen157
+\extrarowheight=\dimen158
+\NC@list=\toks25
+\extratabsurround=\skip67
+\backup@length=\skip68
+)
+\TX@col@width=\dimen159
+\TX@old@table=\dimen160
+\TX@old@col=\dimen161
+\TX@target=\dimen162
+\TX@delta=\dimen163
+\TX@cols=\count308
+\TX@ftn=\toks26
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count309
+\@quotereset=\count310
+ (./paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 68.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 68.
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+Package biblatex Info: Input encoding 'ascii' specified.
+Package biblatex Info: Data encoding 'ascii' specified.
+(biblatex)             No need to reencode data.
+\openout5 = `paper-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'paper.bbl' found.
+ (./paper.bbl)
+Package biblatex Info: Reference section=0 on input line 68.
+Package biblatex Info: Reference segment=0 on input line 68.
+ [1
+
+] (./paper.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+])
+\tf@toc=\write6
+\openout6 = `paper.toc'.
+
+ [2] (./document/0-abstract.tex) (./document/1-introduction.tex [1
+
+]
+第 1 章
+[2
+
+]) (./document/2-conventional-model.tex
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [3]
+第 2 章
+File: ./fig/drawing_1.png Graphic file (type bmp)
+<./fig/drawing_1.png>
+[4
+
+]
+File: ./fig/drawing_2.png Graphic file (type bmp)
+<./fig/drawing_2.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [5]
+File: ./fig/drawing_3.png Graphic file (type bmp)
+<./fig/drawing_3.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [6]
+File: ./fig/drawing_4.png Graphic file (type bmp)
+<./fig/drawing_4.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [7]
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [8]
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [9]
+File: ./fig/drawing_5.png Graphic file (type bmp)
+<./fig/drawing_5.png>
+File: ./fig/drawing_7.png Graphic file (type bmp)
+<./fig/drawing_7.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [10]
+File: ./fig/drawing_6.png Graphic file (type bmp)
+<./fig/drawing_6.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [11]
+File: ./fig/drawing_8.png Graphic file (type bmp)
+<./fig/drawing_8.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [12]
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [13]
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [14]) (./document/3-proposal-model.tex
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [15]
+第 3 章
+[16
+
+]
+File: ./fig/drawing_9.png Graphic file (type bmp)
+<./fig/drawing_9.png>
+
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [17]) (./document/4-experiment.tex
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [18]
+Overfull \vbox (9.45003pt too high) has occurred while \output is active []
+
+ [19]
+第 4 章
+) (./document/5-conclusion.tex [20
+
+]
+第 5 章
+) (./document/6-acknowledgement.tex [21
+
+]) [22
+
+] [23
+
+] (./document/appendixa.tex
+付録 A 
+) [24
+
+] (./paper.aux)
+Package logreq Info: Writing requests to 'paper.run.xml'.
+\openout1 = `paper.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9901 strings out of 493638
+ 165708 string characters out of 6148681
+ 428563 words of memory out of 5000000
+ 13320 multiletter control sequences out of 15000+600000
+ 23288 words of font info for 90 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 44i,11n,45p,1130b,1147s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on paper.dvi (27 pages, 51068 bytes).

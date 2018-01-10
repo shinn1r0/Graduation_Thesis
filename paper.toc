@@ -1,0 +1,47 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{あらまし}{1}
+\contentsline {chapter}{\numberline {第1章}はじめに}{2}
+\contentsline {chapter}{\numberline {第2章}Hierarchical Temporal Memory(HTM)}{4}
+\contentsline {section}{\numberline {2.1}HTMの概要}{4}
+\contentsline {section}{\numberline {2.2}HTMの構造}{4}
+\contentsline {subsection}{\numberline {2.2.1}セルの状態変化}{5}
+\contentsline {subsection}{\numberline {2.2.2}パターン表現}{6}
+\contentsline {subsection}{\numberline {2.2.3}セル内の構造}{6}
+\contentsline {subsection}{\numberline {2.2.4}疎な分散表現}{7}
+\contentsline {section}{\numberline {2.3}HTMの学習アルゴリズム}{7}
+\contentsline {subsection}{\numberline {2.3.1}活性化状態の計算}{8}
+\contentsline {subsection}{\numberline {2.3.2}予測状態の計算}{8}
+\contentsline {subsection}{\numberline {2.3.3}セグメント集合を用いた接続値の更新}{9}
+\contentsline {section}{\numberline {2.4}HTMの学習の例}{10}
+\contentsline {subsection}{\numberline {2.4.1}学習前}{10}
+\contentsline {subsection}{\numberline {2.4.2}学習中}{11}
+\contentsline {subsection}{\numberline {2.4.3}学習後}{11}
+\contentsline {subsection}{\numberline {2.4.4}並列同時予測}{12}
+\contentsline {section}{\numberline {2.5}エンコーダと分類器}{13}
+\contentsline {section}{\numberline {2.6}HTMの問題点}{14}
+\contentsline {chapter}{\numberline {第3章}時間軸セグメントを導入したHTM}{16}
+\contentsline {section}{\numberline {3.1}提案モデルの概要}{16}
+\contentsline {section}{\numberline {3.2}提案モデルの構造}{17}
+\contentsline {subsection}{\numberline {3.2.1}従来型と同じ部分}{17}
+\contentsline {subsection}{\numberline {3.2.2}セル内の構造}{17}
+\contentsline {section}{\numberline {3.3}提案モデルの学習アルゴリズム}{18}
+\contentsline {subsubsection}{\numberline {3.3.0.1}従来型と同じ部分}{18}
+\contentsline {subsection}{\numberline {3.3.1}予測状態のセルの計算}{18}
+\contentsline {subsection}{\numberline {3.3.2}セグメント集合を用いた接続値の更新}{18}
+\contentsline {subsection}{\numberline {3.3.3}セグメント集合の大きさ}{18}
+\contentsline {chapter}{\numberline {第4章}評価実験}{20}
+\contentsline {section}{\numberline {4.1}実験1}{20}
+\contentsline {subsection}{\numberline {4.1.1}実験目的}{20}
+\contentsline {subsection}{\numberline {4.1.2}実験概要}{20}
+\contentsline {section}{\numberline {4.2}実験2}{20}
+\contentsline {subsection}{\numberline {4.2.1}実験目的}{20}
+\contentsline {subsection}{\numberline {4.2.2}実験概要}{20}
+\contentsline {section}{\numberline {4.3}実験3}{20}
+\contentsline {subsection}{\numberline {4.3.1}実験目的}{20}
+\contentsline {subsection}{\numberline {4.3.2}実験概要}{20}
+\contentsline {chapter}{\numberline {第5章}結論}{21}
+\contentsline {chapter}{謝辞}{21}
+\contentsline {chapter}{参考文献}{22}
+\contentsline {chapter}{付録}{24}
+\contentsline {chapter}{付録A\ HTMのパラメータ}{24}
+\contentsline {chapter}{\numberline {付録A}HTMのパラメータ}{24}
