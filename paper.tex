@@ -64,6 +64,7 @@
 
 \addtolength{\topmargin}{-15mm}
 \addtolength{\oddsidemargin}{-15mm}
+\nofiles
 
 
 \begin{document}
@@ -91,17 +92,13 @@
 \input{./document/5-conclusion}
 \input{./document/6-acknowledgement}
 
-\addcontentsline{toc}{chapter}{参考文献}
 \chapter{参考文献}
 \setcounter{page}{35}
 \printbibliography[title=参考文献, heading=bibintoc]
 
 \appendix
 
-\addcontentsline{toc}{chapter}{付録A\ 実験１における$sin$波の再現例}
 \input{./document/appendixa}
-\addcontentsline{toc}{chapter}{付録B\ HTMの実装}
 \input{./document/appendixb}
-\addcontentsline{toc}{chapter}{付録C\ 追加実験}
 \input{./document/appendixc}
 \end{document}
