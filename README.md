@@ -1,4 +1,6 @@
 # Graduation_Thesis
+## 20180130.pdf
+卒論提出時の完成ファイル
 ## paper.tex
 texのメインファイル
 ## document
